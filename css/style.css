@@ -58,7 +58,7 @@ h2.list-item {
 /* Graph */
 .graph {
   max-width: 30rem;
-  margin: 4rem auto; }
+  margin: 4rem auto 2rem; }
   .graph .after {
     position: relative; }
     .graph .after > *:not(button) {
@@ -114,6 +114,13 @@ svg {
   svg .tick line {
     stroke: rgba(0, 0, 0, 0.13);
     stroke-dasharray: 2,2; }
+  svg .president {
+    text-anchor: start;
+    alignment-baseline: hanging;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: "noto-serif-patch", "source-han-serif-tc", serif;
+    opacity: 0.25; }
   svg .sequence path {
     stroke-width: 5;
     stroke-linejoin: round;

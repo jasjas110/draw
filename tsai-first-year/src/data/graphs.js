@@ -28,6 +28,7 @@ var graphs = [
         label: '%',
         min: 0,
         max: 10,
+        ticks:[0, 5, 10],
         formatString: 'd',
       }
     },
@@ -58,6 +59,7 @@ var graphs = [
         label: '百萬人',
         min: 0,
         max: 12000000,
+        ticks:[0, 5000000, 10000000, 12000000],
         formatString: 'd',
       }
     },
@@ -88,6 +90,7 @@ var graphs = [
         label: '萬人',
         min: 0,
         max: 900000,
+        ticks: [0, 500000, 900000],
         formatString: 'd',
       }
     },
@@ -118,6 +121,7 @@ var graphs = [
         label: '萬人',
         min: 0,
         max: 900000,
+        ticks: [0, 500000, 900000],
         formatString: 'd',
       }
     },
@@ -150,11 +154,12 @@ var graphs = [
       },
       y: {
         divider: 1000000,
-        unit: 'trillion',
-        label: '兆',
+        unit: 'ntd',
+        label: '兆元',
         min: 1000000,
         max: 2400000,
-        formatString: '.1f',
+        ticks: [1000000, 2000000],
+        formatString: 'd',
       }
     },
     sequenceCount: 2,
@@ -181,11 +186,12 @@ var graphs = [
       },
       y: {
         divider: 1000000,
-        unit: 'trillion',
-        label: '兆',
+        unit: 'ntd',
+        label: '兆元',
         min: 1000000,
         max: 2400000,
-        formatString: '.1f',
+        ticks: [1000000, 2000000],
+        formatString: 'd',
       }
     },
     sequenceCount: 2,
@@ -218,10 +224,11 @@ var graphs = [
       },
       y: {
         divider: 1000000,
-        unit: 'NTD',
+        unit: 'ntd',
         label: '兆元',
         min: 0,
         max: 8000000,
+        ticks: [0, 5000000, 8000000],
         formatString: 'd',
       }
     },

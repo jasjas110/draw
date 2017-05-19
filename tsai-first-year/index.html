@@ -15,7 +15,7 @@
 	<!-- page-specific tags -->
   <title>沃草→不然你來畫畫看啊←蔡總統的第一年</title>
   <meta name="keywords" content="沃草,國會無雙,沃草國會無雙,畫畫看,不然你來畫畫看啊,蔡英文,蔡總統,第一年,蔡總統的第一年" />
-  <meta name="description" content="不然你來畫畫看啊：蔡總統的第一年" />
+  <meta name="description" content="蔡英文政府已執政滿一週年，跟過去幾年相比，到底表現好不好呢？沃草透過比較從扁政府、馬政府到蔡政府第一年的各項數據，先讓大家自己畫出心中的感受，再來看看你跟真實數據的差異有多少吧！" />
   <meta property="og:image" content="" />
   <link rel="icon" href="https://watchout.tw/asset/logo/musou/small.png">
 	<link rel="stylesheet" href="../css/style.css"/>
@@ -26,15 +26,19 @@
     <header class="textgroup">
       <hgroup>
         <h2>不然你來畫畫看啊</h2>
-        <h1>{{ title }}</h1>
+        <h1>{{ header.title }}</h1>
       </hgroup>
-      <div class="description" v-html="markdown(description)"></div>
+      <div class="description" v-html="markdown(header.description)"></div>
       <div class="authorship">
         <div class="item d-flex flex-row" v-for="item in authorship"><div class="job">{{ item.job }}</div><div v-for="person in item.people" class="person">{{ person }}</div></div>
       </div>
     </header>
     <section id="graphs">
       <graph v-for="props in graphs" :key="props.id" :props="props"></graph>
+    </section>
+    <section id="conclusion" class="textgroup">
+      <h2>{{ conclusion.title }}</h2>
+      <div v-html="markdown(conclusion.description)"></div>
     </section>
   </div><!-- end of app -->
   <footer></footer>

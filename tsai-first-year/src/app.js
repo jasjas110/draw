@@ -40,7 +40,7 @@ Vue.component('graph', {
   template: `
   <div class="graph" :id="props.id">
     <div class="before textgroup">
-      <h2>{{ props.title }}</h2>
+      <h2>{{ props.text.title }}</h2>
       <div class="text a-text-only" v-html="markdown(props.text.before)"></div>
     </div>
     <div class="draw">
@@ -64,8 +64,10 @@ var app = new Vue({
   data: {
     common: CommonData,
     graphs: graphs,
-    title: '蔡總統的第一年',
-    description: '蔡英文政府已執政滿一週年，跟過去幾年相比，到底表現好不好呢？沃草透過比較從扁政府、馬政府到蔡政府第一年的各項數據，先讓大家自己畫出心中的感受，再來看看你跟真實數據的差異有多少吧！',
+    header: {
+      title: '蔡總統的第一年',
+      description: '蔡英文政府已執政滿一週年，跟過去幾年相比，到底表現好不好呢？沃草透過比較從扁政府、馬政府到蔡政府第一年的各項數據，先讓大家自己畫出心中的感受，再來看看你跟真實數據的差異有多少吧！',
+    },
     authorship: [
       {
         job: '數據分析',
@@ -79,7 +81,11 @@ var app = new Vue({
         job: '設計開發',
         people: ['游知澔'],
       },
-    ]
+    ],
+    conclusion: {
+      title: '結論：執政一年、持續監督',
+      description: '重點用兩個星號可以**變成粗體** 😄',
+    },
   },
   methods: {
     markdown: marked,
